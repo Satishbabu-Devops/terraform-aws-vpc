@@ -21,6 +21,9 @@ resource "aws_internet_gateway" "main" {
 
 # us-east-1a and us-east-1b
 # roboshop-dev-public-1a   roboshop-dev-public-1b
+
+# ! us-east-1a and us-east-1b
+# ! roboshop-dev-public-1a  roboshop-dev-public-1b
 resource "aws_subnet" "public" {
   count = length(var.public_subnet_cidrs) 
   vpc_id = aws_vpc.main.id
